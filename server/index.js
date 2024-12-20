@@ -22,7 +22,6 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
   socket.emit("socketId", socket.id);
-
   socket.on(
     "initiateCall",
     ({ targetId, signalData, senderId, senderName }) => {
